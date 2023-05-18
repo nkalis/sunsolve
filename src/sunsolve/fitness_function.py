@@ -101,6 +101,7 @@ def main_calc(solution, led_df, am):
 
     return fits, fit, fit_weight, bins, bin_perc, xs, ys
 
+
 # function used for the Genetic algorithm
 def fitness_function_factory(am, led_df):
     """_summary_
@@ -109,9 +110,10 @@ def fitness_function_factory(am, led_df):
         am (_type_): _description_
         led_df (_type_): _description_
     """
+
     def fitness_function(ga_instance, solution, solution_idx):
         fits, fit, fit_weight, bins, bin_perc, xs, ys = main_calc(solution, led_df, am)
-    
-        return(fit)
-    
+
+        return fit
+
     return fitness_function

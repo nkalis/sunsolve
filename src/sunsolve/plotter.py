@@ -1,7 +1,8 @@
+import pkgutil
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import pkgutil
 
 
 # function used when plotting the information
