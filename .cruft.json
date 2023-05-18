@@ -1,0 +1,18 @@
+{
+  "template": "https://github.com/woltapp/wolt-python-package-cookiecutter",
+  "commit": "4eecc9c4d27e3c9321438bc1fdaf717bec5eadf6",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "author_name": "nkalis",
+      "author_email": "n.kalis98@gmail.com",
+      "github_username": "nkalis",
+      "project_name": "SunSolve",
+      "project_slug": "sunsolve",
+      "package_name": "sunsolve",
+      "project_short_description": "A python package for solving the inverse problem of matching LEDs to the sun’s spectrum",
+      "_template": "https://github.com/woltapp/wolt-python-package-cookiecutter"
+    }
+  },
+  "directory": null
+}
