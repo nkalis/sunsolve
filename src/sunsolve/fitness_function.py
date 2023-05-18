@@ -57,7 +57,7 @@ def main_calc(solution, led_df, am):
         power = led_df["Output Power (mw)"][led] * bright
         theta = led_df["Viewing Angle (deg)"][led]
         wavelength = led_df["Peak wavelength (nm)"][led]
-        FWHM = led_df["FWHM (nm)"][led]
+        fwhm = led_df["FWHM (nm)"][led]
         # Physical constraints
         d = 0.30  # Distance from measurement device [m]
         r = np.tan(np.deg2rad(theta / 2)) * d  # radius of beam swadth [m^2]
@@ -66,7 +66,7 @@ def main_calc(solution, led_df, am):
         # Sum the total power of all LEDs
         tot_pow = tot_pow + power_den
         # Simulate wavelength distribution ±4 standard deviations from peak-power wavelength
-        std_dev = FWHM / 2.3548
+        std_dev = fwhm / 2.3548
         x_min = wavelength - (std_dev * 4)
         x_max = wavelength + (std_dev * 4)
         x, step = np.linspace(x_min, x_max, 20, retstep=True)
@@ -76,14 +76,10 @@ def main_calc(solution, led_df, am):
 
     # Calculate exact number of LED panels would be required
     num_panels = np.ceil(1036.7156 / np.trapz(ys, xs))
-    # Or specify number of panels
-    # num_panels = 15
     # Scale output of one panel to total number of panels
     ys = ys * num_panels
     # Evalation bins
     bins = list(range(350, 1250, 100))
-    # bins = list(np.arange(300,1350,5))
-    # bins = np.asarray([300, 470, 561, 657, 772, 919, 1200])
     fits = []
     for x in range(len(bins) - 1):
         # Calculate actual solar power between two wavelengths from the bins

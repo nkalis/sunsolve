@@ -33,7 +33,7 @@ pip install sunsolve
 * Create a virtual environment and install the dependencies
 
 ```sh
-poetry install --no-root
+poetry install
 ```
 
 * Activate the virtual environment

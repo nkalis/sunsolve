@@ -1,6 +1,5 @@
 import numpy as np
 import pandas as pd
-
 from optimize.fitness_function import main_calc
 from plot_spectrum.plotter import plot_spectrum
 
