@@ -10,7 +10,7 @@
       "project_name": "SunSolve",
       "project_slug": "sunsolve",
       "package_name": "sunsolve",
-      "project_short_description": "A python package for solving the inverse problem of matching LEDs to the sun’s spectrum",
+      "project_short_description": "A python package for solving the inverse problem of matching LEDs to the sun's spectrum",
       "_template": "https://github.com/woltapp/wolt-python-package-cookiecutter"
     }
   },
