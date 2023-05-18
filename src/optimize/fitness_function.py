@@ -1,5 +1,3 @@
-import typing
-
 # fit_sum calculates the sum of fitness values between all the specified bins
 def fit_sum(fits_per_bin):
     """This is a function that uses a normalized normal disctribution to add a weighted score to how close the LED simulation is to each 
