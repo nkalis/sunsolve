@@ -5,10 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
-## [0.0.2] - 2023-05-18
+## 0.0.2 - 2023-05-18
 ### Fixed
 - Getting everything working for CI/CD.
 
-## [0.0.1] - 2022-05-18
+## 0.0.1 - 2022-05-18
 ### Fixed
 - Project initialized.
