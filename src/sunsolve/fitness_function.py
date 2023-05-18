@@ -29,10 +29,12 @@ def fit_sum(fits_per_bin):
 
 # main_calc is the main simulation/fitness calculator. Used for both calculating and potting the results
 def main_calc(solution, led_df, am):
-    """This is the main formuka
+    """_summary_
 
     Args:
         solution (_type_): _description_
+        led_df (_type_): _description_
+        am (_type_): _description_
 
     Returns:
         _type_: _description_
@@ -79,7 +81,7 @@ def main_calc(solution, led_df, am):
     # Scale output of one panel to total number of panels
     ys = ys * num_panels
     # Evalation bins
-    bins = list(range(350, 1250, 100))
+    bins = list(range(400, 1200, 80))
     fits = []
     for x in range(len(bins) - 1):
         # Calculate actual solar power between two wavelengths from the bins
@@ -98,3 +100,18 @@ def main_calc(solution, led_df, am):
     fit, fit_weight = fit_sum(fits)
 
     return fits, fit, fit_weight, bins, bin_perc, xs, ys
+
+# function used for the Genetic algorithm
+def fitness_function_factory(am, led_df):
+    """_summary_
+
+    Args:
+        am (_type_): _description_
+        led_df (_type_): _description_
+    """
+    def fitness_function(ga_instance, solution, solution_idx):
+        fits, fit, fit_weight, bins, bin_perc, xs, ys = main_calc(solution, led_df, am)
+    
+        return(fit)
+    
+    return fitness_function

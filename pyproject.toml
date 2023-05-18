@@ -30,7 +30,15 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.7.1, <4.0"
+python = ">=3.8, <3.12"
+numpy = "^1.24.3"
+pandas = "^2.0.1"
+scipy = "^1.10.1"
+pygad = "^3.0.1"
+openpyxl = "^3.1.2"
+xlrd = "^2.0.1"
+tqdm = "^4.65.0"
+prettytable = "^3.7.0"
 
 [tool.poetry.dev-dependencies]
 autoflake = "*"
@@ -55,6 +63,7 @@ pytest-cov = "*"
 python-kacl = "*"
 pyupgrade = "*"
 tryceratops = "*"
+urllib3 = "^1.2.3"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
