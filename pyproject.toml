@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sunsolve"
-version = "0.0.1"
+version = "0.0.2"
 description = "A python package for solving the inverse problem of matching LEDs to the sun’s spectrum"
 authors = [
     "nkalis <n.kalis98@gmail.com>",
